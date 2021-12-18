@@ -108,7 +108,7 @@
     }
 
 
-    @media (max-width: 600px){
+    /* @media (max-width: 600px){
       .playerCards > img{
         width:20%;
       }
@@ -133,9 +133,47 @@
       .dealerCards > img{
         width:16%;
       }
+    } */
+
+    @media (max-width:1080px){
+      .dealerCards > img{
+        width: 25%;
+      }
+
+      .tituloJogo{
+      text-align: center;
+      font-family: 'Courgette', cursive;
+      font-size: 10vw;
+      color: aliceblue;
     }
 
+    .icone{
+      width:90px
+    }
 
+    }
+
+    @media (max-width:1080px){
+      .playerCards > img{
+        width: 25%;
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .button {
+        font-size: 3rem;
+        padding: .75rem 3rem;
+      }
+    
+    .button:disabled{
+      background-color: grey;
+      box-shadow: none;
+      transform: scale(1);
+      cursor: not-allowed;
+      
+    }
+  
+  }
 
 
 
@@ -147,7 +185,8 @@
 
     #ptsnmr{
       padding-left: 10px;
-      font-size: 30px;
+      /* font-size: 30px; */
+      font-size: 10vw;
     }
 
     #pontosDealer{
@@ -158,7 +197,8 @@
 
     #ptsnmrd{
       padding-left: 10px;
-      font-size: 30px;
+      /* font-size: 30px; */
+      font-size: 10vw;
     }
 
     
@@ -176,14 +216,15 @@
     <section id="game">
 
       <div id="pontosDealer">
-        <h2 id="ptsd" title="pontosDealer">Pontos Dealer: </h2>
+        <h2 id="ptsd" title="pontosDealer" style="font-size: 9vw;">Pontos Dealer: </h2>
         <p id="ptsnmrd">0</p>
       </div>
       
-      <h1>Dealer</h1>
+      
       <p id="dealer"></p>
       <p id="dealerStatus">x</p>
       <div id="dealerCards" class="text-center dealerCards"></div>
+      <h1 style="font-size: 5vw;">Dealer</h1>
 
       <br>
 
@@ -192,13 +233,13 @@
       <button id="new_game" class ="button" type="button" onclick="new_game()" disabled>New Game</button>
 
       <p id="playerStatus">x</p>
-      <h1>Player</h1>
+      <h1 style="font-size: 5vw;">Player</h1>
       <p id="player"></p>
       
       <div id="playerCards" class="text-center playerCards"></div>
       
       <div id ="pontosJogador">
-        <h2 id="pts">Pontos Jogador: </h2>
+        <h2 id="pts" style="font-size: 9vw;">Pontos Jogador: </h2>
         <p id="ptsnmr" "></p>
       </div>
       
