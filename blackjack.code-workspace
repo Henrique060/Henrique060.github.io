@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\JavaScript_SINTAXE_BASE"
+		},
+		{
+			"path": "..\\..\\DOM_API"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Blackjack"
+	}
+}

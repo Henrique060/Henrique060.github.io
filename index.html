@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <script src="js/blackjack_object.js"></script>
+    <script src="js/blackjack_manager.js"></script>
+    <link rel="icon" type="image/x-icon" href="cards.png">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@400;500&family=Roboto+Mono&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>BlackJack</title>
+  </head>
+  <style>
+    body{
+      background-image: url("../poker.jpg");
+      color:aliceblue;
+      
+      /* cursor: pointer; */
+      justify-content: center;
+      
+    }
+    .tituloJogo{
+      text-align: center;
+      font-family: 'Courgette', cursive;
+      font-size: 30px;
+      color: aliceblue;
+      
+    }
+    
+    
+
+    .button {
+      appearance: none;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      border-style: none;
+      box-shadow: #ADCFFF 0 -20px 6px inset;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'Courgette';
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -.24px;
+      margin: 0;
+      outline: none;
+      padding: 1rem 1.3rem;
+      quotes: auto;
+      text-align: center;
+      text-decoration: none;
+      transition: all .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button:hover {
+      background-color: #FFC229;
+      box-shadow: #FF6314 0 -6px 8px inset;
+      transform: scale(1.125);
+    }
+
+    .button:active {
+      transform: scale(1.025);
+    }
+
+    @media (min-width: 700px) {
+      .button {
+        font-size: 1rem;
+        padding: .75rem 2rem;
+      }
+    }
+    .button:disabled{
+      background-color: grey;
+      box-shadow: none;
+      transform: scale(1);
+      cursor: not-allowed;
+      
+    }
+    
+
+    .div{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      backdrop-filter: blur(4px);
+    }
+    .icone{
+      width:50px
+    }
+
+
+    
+
+    
+
+    #game{
+      text-align: center;
+      font-family: 'Courgette';
+    }
+
+    .playerCards > img{
+      width: 6%;
+    }
+
+    .dealerCards > img{
+      width:6%;
+    }
+
+
+    @media (max-width: 600px){
+      .playerCards > img{
+        width:20%;
+      }
+    }
+
+    @media (max-width: 600px){
+      .dealerCards > img{
+        width:20%;
+      }
+    }
+
+
+
+
+    @media (min-width: 601px) and (max-width:800px){
+      .playerCards > img{
+        width:16%;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width:800px){
+      .dealerCards > img{
+        width:16%;
+      }
+    }
+
+
+
+
+
+    #pontosJogador{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #ptsnmr{
+      padding-left: 10px;
+      font-size: 30px;
+    }
+
+    #pontosDealer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #ptsnmrd{
+      padding-left: 10px;
+      font-size: 30px;
+    }
+
+    
+  </style>
+
+  <body>
+    <header>
+      <div class="div">
+        <img class="icone" src="cards.png">
+        <h1 class="tituloJogo">BlackJack</h1>
+      </div>
+      
+    </header>
+
+    <section id="game">
+
+      <div id="pontosDealer">
+        <h2 id="ptsd" title="pontosDealer">Pontos Dealer: </h2>
+        <p id="ptsnmrd">0</p>
+      </div>
+      
+      <h1>Dealer</h1>
+      <p id="dealer"></p>
+      <p id="dealerStatus">x</p>
+      <div id="dealerCards" class="text-center dealerCards"></div>
+
+      <br>
+
+      <button id="card" class ="button" type="button" onclick="player_new_card()">Card</button>
+      <button id="stand" class ="button" type="button" onclick="dealer_finish()">Stand</button>
+      <button id="new_game" class ="button" type="button" onclick="new_game()" disabled>New Game</button>
+
+      <p id="playerStatus">x</p>
+      <h1>Player</h1>
+      <p id="player"></p>
+      
+      <div id="playerCards" class="text-center playerCards"></div>
+      
+      <div id ="pontosJogador">
+        <h2 id="pts">Pontos Jogador: </h2>
+        <p id="ptsnmr" "></p>
+      </div>
+      
+    </section>
+
+    <!-- <section id="sec_debug">
+      <h1>Debug</h1>
+      <p id="debug"></p>
+    </section> -->
+
+    <section>
+      <script> window.onload = new_game();</script>
+    </section>
+    <footer></footer>
+  </body>
+
+</html> 

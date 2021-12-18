@@ -1,0 +1,32 @@
+O jogo acaba:
+
+    o jogador rebenta
+    o jogador tem menos pontos que o dealer ao pedir a segunda carta
+    o jogador tem mais pontos que o dealer sem rebentar
+    o jogador atinge 21 (faz blackjack)
+
+    o dealer rebenta
+    o dealer atinge 21
+    o dealer tem menos pontos que o jogador
+    o dealer tem mais pontos que o jogador sem rebentar
+
+
+
+    get_cards_value(cards){
+        let weight = 0;
+        for(let i = 0; i < this.numeros.length; i++){
+            for(let j = 0; j < this.naipes.length; j++){
+                
+            }
+        }
+
+
+    }
+
+
+    get_game_state() :
+
+        criar variaveis dos pontos do jogador e dealer que vai buscar o 
+    card value recebendo a variavel ..._cards
+        criar variaveis que indicam a condição de player e dealer busted
+        criar as condicoes 
