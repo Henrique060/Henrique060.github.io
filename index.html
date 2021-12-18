@@ -101,6 +101,7 @@
 
     .playerCards > img{
       width: 6%;
+      transition-timing-function: ease;
     }
 
     .dealerCards > img{
@@ -232,11 +233,11 @@
       <button id="stand" class ="button" type="button" onclick="dealer_finish()">Stand</button>
       <button id="new_game" class ="button" type="button" onclick="new_game()" disabled>New Game</button>
 
-      <p id="playerStatus">x</p>
+      <p id="playerStatus" style="font-size: 3vw;">x</p>
       <h1 style="font-size: 5vw;">Player</h1>
       <p id="player"></p>
       
-      <div id="playerCards" class="text-center playerCards"></div>
+      <div id="playerCards" class="text-center playerCards" style="transition-timing-function: ease-in;"></div>
       
       <div id ="pontosJogador">
         <h2 id="pts" style="font-size: 9vw;">Pontos Jogador: </h2>
